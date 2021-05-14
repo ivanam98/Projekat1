@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+body {
+  background-color: #8080c0;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 30px;
+}

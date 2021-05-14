@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+body {
+  background-color: #8080c0;
+  color: white;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+#para1{
+	color: #ff80c0;
+}
