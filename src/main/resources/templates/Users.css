@@ -1,11 +1,11 @@
 @charset "ISO-8859-1";
 body {
-  background-color: #8080c0;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 h1 {
-  color: #ffffff;
+  color: black;
   text-align: center;
 }
 
@@ -15,4 +15,8 @@ p {
 }
 #para1{
 	color: #ff80c0;
+}
+#button{
+	background-color: blue;
+	color: white
 }
