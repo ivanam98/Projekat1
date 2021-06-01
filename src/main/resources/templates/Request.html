@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="Users.css">
 </head>
 <body>
-<h1>Users</h1>
+<h1>Request for coach sign in</h1>
+<h3>This member would like to sign in as a coach</h3>
 
 <table border= "solid 1px black">
 	<thead>
@@ -28,8 +29,9 @@
 	        <td th:text="${usera.role}"></td>
 	        <td th:text="${usera.dateOfBirth}"></td>
 	        <td th:text="${usera.phoneNumber}"></td>
-	        <td th:text="${usera.emailAddress}"></td>
-	        <td><a th:href="${'/Users/' + Usera.id}">View profile</a></td>
+	        <td th:text="${korisnik.emailAddress}"></td>
+	        <td><input type="button" value="cancel" onclick="alert('Request denied')"></td>
+	        <td><input type="button" value="accept" id="button" onclick="alert('The request was accepted')"></td>
 	        
 	    </tr>
 	</thead>

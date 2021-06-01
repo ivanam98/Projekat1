@@ -3,25 +3,25 @@ package com.projekat.Projekat1.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.projekat.Projekat1.entity.Usera;
+import com.projekat.Projekat1.entity.User;
 import com.projekat.Projekat1.repository.UseraRepository;
 
-import java.util.List;
 
+import java.util.List;
 @Service
 public class UseraService {
 
 	@Autowired
 	private UseraRepository useraRepository;
 	
-	public void create(Usera usera) throws Exception{
+	public void create(User usera) throws Exception{
 		if(usera.getId() !=null) {
 			throw new Exception("Id is not null");
 		}
 		this.useraRepository.save(usera);
 	}
 	
-	public List<Usera> findUsers(String s1) {
+	public List<User> findUsers(String s1) {
 
         return this.useraRepository.findByRole(s1);
     }
@@ -29,15 +29,22 @@ public class UseraService {
         this.useraRepository.deleteById(id);
     }
 	
-	public List<Usera> findCoach(String s1) {
+	public List<User> findCoach(String s1) {
         return this.useraRepository.findByRole(s1);
     }
 	
-	public void save(Usera usera) {
+	public void save(User usera) {
         this.useraRepository.save(usera);
     }
 
-    public Usera findByUsername(String s1){
+    public User findByUsername(String s1){
         return this.useraRepository.findByUsername(s1);
+    }
+    public User findOne(Long id) {
+        return this.useraRepository.getOne(id);
+    }
+    public List<User> findAll(){
+    	List<User> users = this.useraRepository.findAll();
+    	return users;
     }
 }

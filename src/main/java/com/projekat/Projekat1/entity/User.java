@@ -6,35 +6,28 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-public class Usera implements Serializable {
-
+@Table(name = "Usera")
+@Inheritance(strategy = InheritanceType.JOINED)
+public class User implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column
 	private String username;
 	
-	@Column
 	private String password;
-	
-	@Column(name = "First name")
+//	first_name
 	private String firstName;
 	
-	@Column
 	private String lastName;
 	
-	@Column
 	private String phoneNumber;
 	
-	@Column
 	private String emailAddress;
 	
-	@Column
 	private String dateOfBirth;
 	
-	@Column 
 	private String role;
 	
 	public Long getId() {

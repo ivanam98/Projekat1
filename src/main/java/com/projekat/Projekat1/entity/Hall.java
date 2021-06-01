@@ -16,4 +16,30 @@ public class Hall implements Serializable {
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private FitnessCentar fitnessCentar;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public long getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(long capacity) {
+		this.capacity = capacity;
+	}
+
+	public FitnessCentar getFitnessCentar() {
+		return fitnessCentar;
+	}
+
+	public void setFitnessCentar(FitnessCentar fitnessCentar) {
+		this.fitnessCentar = fitnessCentar;
+	}
+	
+	
 }

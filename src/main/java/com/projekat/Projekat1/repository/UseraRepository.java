@@ -4,18 +4,18 @@ package com.projekat.Projekat1.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.projekat.Projekat1.entity.Usera;
+import com.projekat.Projekat1.entity.User;
 
 import java.util.List;
 
 
 @Repository
-public interface UseraRepository extends JpaRepository<Usera, Long>{
+public interface UseraRepository extends JpaRepository<User, Long>{
 	
 	
-	Usera findByUsernameAndPassword(String username, String password);
-	List<Usera> findByRole(String role);
-	Usera findByUsername(String username);
+	User findByUsernameAndPassword(String username, String password);
+	List<User> findByRole(String role);
+	User findByUsername(String username);
 	
 
 }
