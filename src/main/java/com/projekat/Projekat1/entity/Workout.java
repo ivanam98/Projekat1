@@ -11,6 +11,8 @@ import javax.persistence.*;
 public class Workout implements Serializable {
 	
 	@Id
+	private long id;
+	
 	private String name;
 	
 	private String description;

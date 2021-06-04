@@ -17,7 +17,7 @@ public class User implements Serializable {
 	private String username;
 	
 	private String password;
-//	first_name
+
 	private String firstName;
 	
 	private String lastName;
@@ -30,6 +30,14 @@ public class User implements Serializable {
 	
 	private String role;
 	
+	public User(String username2, String emailAddress2, String role2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Long getId() {
         return id;
     }

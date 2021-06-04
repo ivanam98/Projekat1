@@ -7,6 +7,8 @@ public class UseraDTO {
 	private String emailAddress;
 	private String role;
 	
+	public UseraDTO() {
+    }
 	 public UseraDTO(Long id, String username, String emailAddress, String role) {
 	        this.id = id;
 	        this.setUsername(username);

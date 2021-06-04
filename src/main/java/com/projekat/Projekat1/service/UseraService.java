@@ -14,12 +14,13 @@ public class UseraService {
 	@Autowired
 	private UseraRepository useraRepository;
 	
-	public void create(User usera) throws Exception{
-		if(usera.getId() !=null) {
-			throw new Exception("Id is not null");
-		}
-		this.useraRepository.save(usera);
-	}
+	public User create(User user) throws Exception {
+        if (user.getId() != null) {
+            throw new Exception("ID must be null!");
+        }
+        User newUser = this.useraRepository.save(user);
+        return newUser;
+    }
 	
 	public List<User> findUsers(String s1) {
 
