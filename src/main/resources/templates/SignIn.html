@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="css/SignIn.css">
+    <script th:src="@{/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/auth.js}"></script>
+</head>
+<body>
+<h1>Sign In</h1>
+<form th:action="@{/save}" th:object="${}" method="post" id="registration_form">
+    <label for="firstName">First Name:</label>
+    <input id="firstName" type="text" placeholder="Input First name here"/><br/>
+    <label for="username">Username:</label>
+    <input id="username" type="text" th:field="*{username}" placeholder= "Input Username here"/><br/>
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" type="text" th:field="*{lastName}"/><br/>
+    <label for="password">Password:</label>
+    <input id="password" type="password" th:field="*{password]}"/><br/>
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input id="dateOfBirth" type="date" th:field="*{dateOfBirth}"/><br/>
+    <label for="emailAddress">E mail:</label>
+    <input id="emailAddress" type="email" th:field="*{emailAddress}"/><br/>
+    <label for="phoneNumber">Phone Number:</label>
+    <input id="phoneNumber" type="text" th:field="*{phoneNumber}"/><br/>
+
+    <input type="submit" id="button">
+</form>
+</body>
+</html>

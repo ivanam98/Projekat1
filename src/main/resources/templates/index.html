@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/Home.css}">
+    <script th:src="@{/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/home.js}"></script>
+    <script th:src="@{/auth.js}"></script>
+    <title>Demo project</title>
+</head>
+<body>
+    <h1>Home page</h1>
+    <h2>Welcome!</h2>
+    <h3><a id="login">log In</a></h3>
+    <h3><a id="register_user_form">Sign In as a Member</a></h3>
+    <h3><a id="register_coach">Sign In as a Coach</a></h3>
+    <a th:href="${'/SignIn'}"></a>
+
+    <form id="registration_form">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" placeholder="Input First name here"/><br/>
+        <label for="username">Username:</label>
+        <input id="username" type="text" placeholder= "Input Username here"/><br/>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text"/><br/>
+        <label for="password">Password:</label>
+        <input id="password" type="password"/><br/>
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input id="dateOfBirth" type="date"/><br/>
+        <label for="emailAddress">E mail:</label>
+        <input id="emailAddress" type="email"/><br/>
+        <label for="phoneNumber">Phone Number:</label>
+        <input id="phoneNumber" type="text"/><br/>
+
+        <input type="submit" id="button">
+    </form>
+</body>
+</html>
