@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="css/SignIn.css">
+<<<<<<< HEAD:src/main/resources/static/SignIn.html
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/auth.js"></script>
+    <h1>Sign in</h1>
+</head>
+<body>
+    <form id="registration_form">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" placeholder="Input First name here"/><br/>
+        <label for="username">Username:</label>
+        <input id="username" type="text" placeholder= "Input Username here" name = "username_reg"/><br/>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text"/><br/>
+        <label for="password">Password:</label>
+        <input id="password" type="password"/><br/>
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input id="dateOfBirth" type="date"/><br/>
+        <label for="emailAddress">E mail:</label>
+        <input id="emailAddress" type="email"/><br/>
+        <label for="phoneNumber">Phone Number:</label>
+        <input id="phoneNumber" type="text"/><br/>
+=======
+    <script th:src="@{/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/auth.js}"></script>
+</head>
+<body>
+<h1>Sign In</h1>
+<form th:action="@{/save}" th:object="${}" method="post" id="registration_form">
+    <label for="firstName">First Name:</label>
+    <input id="firstName" type="text" placeholder="Input First name here"/><br/>
+    <label for="username">Username:</label>
+    <input id="username" type="text" th:field="*{username}" placeholder= "Input Username here"/><br/>
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" type="text" th:field="*{lastName}"/><br/>
+    <label for="password">Password:</label>
+    <input id="password" type="password" th:field="*{password]}"/><br/>
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input id="dateOfBirth" type="date" th:field="*{dateOfBirth}"/><br/>
+    <label for="emailAddress">E mail:</label>
+    <input id="emailAddress" type="email" th:field="*{emailAddress}"/><br/>
+    <label for="phoneNumber">Phone Number:</label>
+    <input id="phoneNumber" type="text" th:field="*{phoneNumber}"/><br/>
+>>>>>>> 6ecd0c16736c6d7f93c07c179f49fc6e1e248954:src/main/resources/templates/SignIn.html
+
+        <input type="submit" id="button">
+    </form>
+</body>
+</html>
