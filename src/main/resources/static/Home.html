@@ -11,10 +11,9 @@
 <body>
     <h1>Home page</h1>
     <h2>Welcome!</h2>
-    <h3><a id="login">log In</a></h3>
-    <h3><a href="/SignIn">Sign In as a Member</a></h3>
-    <h3><a href="/CoachSignin">Sign In as a Coach</a></h3>
-    <h3><a href="/register">Log In</a></h3>
+    <h3><a id="login" onclick="location.href = 'Login.html'">log In</a></h3>
+    <h3><a id="register_user_form" onclick="location.href = 'SignIn.html'">Sign In as a Member</a></h3>
+    <h3><a id="register_coach" onclick="location.href = 'CoachSignin.html'">Sign In as a Coach</a></h3>
     <a th:href="${'/SignIn'}"></a>
+
 </body>
-</html>

@@ -4,16 +4,40 @@
     <meta charset="ISO-8859-1">
     <title>Login</title>
     <link rel="stylesheet" href="css/Login.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
-<h1>Log In</h1>
-<form th:action="@{/login}" th:object="${usera}" method="post" id="form">
-    <label for="username">Ussername:</label>
-    <input id="username" type="text" th:field="*{username}"/><br/>
-    <label for="password">Password:</label>
-    <input id="password" type="password" th:field="*{password}"/><br/>
-    <input type="submit" id="button">
-</form>
-</body>
+<div class="div_reg" id="div_login">
+        <h1>Log in</h1></br>
+        <form id="forma">
+            <table>
+                <tr>
+                    <th>Username: </th>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <th>Password: </th>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p align="right" id="err" style="color: red"></p></td> 
+                </tr>
+                <tr><td colspan="2">&nbsp;</td></tr>
+                <tr>
+                    <td colspan="2" id="submit_prijava"><input type="submit" value=" Log in "></td> 
+                </tr>
+            </table>
+        </form>
+
+        </br>
+    </div>
+
+    <div id="dugme_reg">
+        <h2>If you don't have an account, register here</h2>
+        <button id="btn_reg" onclick="location.href = 'SignIn.html'">Sign in</button>
+    </div>
+    
 </body>
 </html>

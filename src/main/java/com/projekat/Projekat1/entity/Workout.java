@@ -3,7 +3,7 @@ package com.projekat.Projekat1.entity;
 
 
 import java.io.Serializable;
-
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -23,6 +23,12 @@ public class Workout implements Serializable {
 
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Coach coach;
+
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private Member member;
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<ScheduleWorkout> scheduleWorkout;
 
 	public String getName() {
 		return name;
